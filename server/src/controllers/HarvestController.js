@@ -13,21 +13,19 @@ module.exports = {
     },
 
     async store(req, res) {
-        const { code, start, end, mill} = req.body;
+        const { code, start, end, mill } = req.body;
 
-        const millid =  await model.Mill.findOne({
-            where: {name: mill},
+        const millId =  await model.Mill.findOne({
+            where: { name: mill },
             attributes: ["id"]
         })
         .then(id => { return id });
-
-        console.log("MILL", millid['id'])
 
         await model.Harvest.create({
             code,
             start,
             end,
-            mill_id: millid["id"],
+            mill_id: millId["id"],
         })
         .then(harvest => res.status(201).json({
             message: `Harvest ${harvest.code} successfully created`
