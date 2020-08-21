@@ -31,7 +31,7 @@ module.exports = {
             message: `Harvest ${harvest.code} successfully created`
         }))
         .catch(err => res.status(500).json({
-            message: 'Unexpected error while creating new mill',
+            message: 'Unexpected error while creating new harvest',
             error: true,
             error: err
         }))

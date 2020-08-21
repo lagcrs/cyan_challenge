@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     Farm.associate = function(models) {
         Farm.belongsTo(models.Harvest, {
             foreignKey: 'harvest_id'
+        });
+
+        Farm.hasMany(models.Field, {
+            foreignKey: 'farm_id'
         })
     };
 

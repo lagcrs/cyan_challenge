@@ -13,15 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       }
 	});
 	
-    Harvest.associate = function(models) {
-        Harvest.belongsTo(models.Mill, {
-            foreignKey: 'mill_id'
+	Harvest.associate = function(models) {
+		Harvest.belongsTo(models.Mill, {
+			foreignKey: 'mill_id'
 		});
-		
+	
 		Harvest.hasMany(models.Farm, {
 			foreignKey: 'harvest_id'
 		})
-    };
-  
-    return Harvest;
+	};
+
+  return Harvest;
 }

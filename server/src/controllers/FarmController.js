@@ -19,7 +19,7 @@ module.exports = {
             where: { code: harvest },
             attributes: ["id"]
         })
-        .then( id =>{ return id });
+        .then( id => { return id });
 
         await model.Farm.create({
             code,
@@ -30,7 +30,7 @@ module.exports = {
             message: `Farm ${farm.code} successfully created`
         }))
         .catch(err => res.status(500).json({
-            message: 'Unexpected error while creating new mill',
+            message: 'Unexpected error while creating new farm',
             error: true,
             error: err
         }))
