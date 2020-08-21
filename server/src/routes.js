@@ -3,6 +3,7 @@ const MillController = require('./controllers/MillController');
 const HarvestController = require('./controllers/HarvestController');
 const FarmController = require('./controllers/FarmController');
 const FieldController = require('./controllers/FieldController');
+const FilterController = require('./controllers/FilterController');
 
 const routes = express.Router();
 
@@ -17,5 +18,7 @@ routes.post('/farms', FarmController.store);
 
 routes.get('/fields', FieldController.index);
 routes.post('/fields', FieldController.store);
+
+routes.get('/filter', FilterController.index);
 
 module.exports = routes;
