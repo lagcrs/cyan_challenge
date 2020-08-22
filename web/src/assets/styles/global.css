@@ -1,0 +1,55 @@
+:root {
+    font-size: 60%;
+
+    --color-background: #F0F0F7;
+    --color-background-2: #f8f6ec;
+    --color-primary: #75BF44;
+    --color-secundary: #F4F1E1;
+    --color-third: #8C8554;
+    --color-text-title: #4d4d4d;
+    --color-text-base: #F8F8FC;
+
+    --color-primary-dark: #774DD6;
+    --color-primary-darker: #6842C2;
+    --color-primary-lighter: #9871F5;
+    --color-primary-light: #916BEA;
+    --color-secundary-dark: #04BF58;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #D4C2FF;
+ 
+    --color-text-complement: #9C98A6;
+    
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100vh;
+}
+
+body {
+    background: var(--color-background);
+}
+
+body, input, button {
+    font: 500 1.6rem Roboto;
+    color: var(--color-text-base);
+}
+
+@media (min-width: 700px) {
+    :root {
+        font-size: 62.5%;
+    }
+}

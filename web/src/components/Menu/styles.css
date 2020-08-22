@@ -1,0 +1,34 @@
+.header{
+    height: 10vh;
+    padding: 0 5rem;
+    background: var(--color-background-2);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .header-logo {
+    font: 700 4rem Montserrat;
+    color: var(--color-primary);
+    letter-spacing: -4px;
+}
+
+.header .header-button a {
+    width: 9rem;
+    height: 4rem;
+    border-radius: 10rem;
+    padding: 2rem 1rem;
+    font-weight: 400;
+    background: var(--color-text-title);
+    text-decoration: none;
+    color:  var(--color-text-base);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: background-color 1s;
+}
+
+.header .header-button a:hover {
+    background: #333333;
+}
