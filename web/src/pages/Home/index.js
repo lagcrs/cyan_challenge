@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import Menu from '../../components/Menu';
+import Button from '../../components/Button';
 
 import headerImg from '../../assets/images/header.png';
 import './styles.css'
@@ -8,16 +10,18 @@ import './styles.css'
 function Home() {
   return (
     <>
-    	<Menu/>
+    	<Menu to="/filter" text="Filtrar"/>
 		<header id="page-landing">
 			<div id="page-landing-content" >
 				<div className="logo-container">
 					<h2>Plataforma de controle de usinas de cana-de-açucar</h2>
 					<p>Ajudando agricultores a possuírem um melhor controle de suas produções.</p>
 					<div className="button-container">
-						<Link to="/create">
-							Cadastrar Usina
-						</Link>
+						<Button
+							as={ Link } to="/create"
+							background="#75BF44"
+							hover="#68ab3b"
+						>Cadastrar Usina</Button>
 					</div>
 				</div>
 
