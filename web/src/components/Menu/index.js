@@ -10,15 +10,17 @@ import './styles.css'
 function Menu(props) {
   return (
     <nav className="header">
+      <div>
         <div className="header-logo">
-            Sugarcane
-        </div>
+          Sugarcane
+          </div>
 
         <div className="header-button">
-            <Button
-				as={ Link } to={props.to}
-  			>{props.text}</Button>
+          <Button
+            as={Link} to={props.to}
+          >{props.text}</Button>
         </div>
+      </div>
     </nav>
   );
 }

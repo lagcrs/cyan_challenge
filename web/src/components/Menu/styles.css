@@ -1,11 +1,15 @@
 .header{
     height: 10vh;
-    padding: 0 5rem;
     background: var(--color-background-2);
+    display: flex;
+    align-content: center;
+}
 
+.header div {
+    margin: 0 auto;
+    width: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .header .header-logo {
@@ -14,8 +18,7 @@
     letter-spacing: -4px;
 }
 
-
-
-.header .header-button a:hover {
-    background: #333333;
+.header .header-button{
+    display: flex;
+    justify-content: flex-end;
 }
