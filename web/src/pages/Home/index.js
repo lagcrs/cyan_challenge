@@ -21,7 +21,7 @@ function Home() {
 							as={ Link } to="/create"
 							background="#75BF44"
 							hover="#68ab3b"
-						>Cadastrar Usina</Button>
+						>Começar Agora</Button>
 					</div>
 				</div>
 

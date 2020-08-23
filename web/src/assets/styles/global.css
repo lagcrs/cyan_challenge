@@ -8,6 +8,8 @@
     --color-third: #8C8554;
     --color-text-title: #4d4d4d;
     --color-text-base: #F8F8FC;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
 
     --color-primary-dark: #774DD6;
     --color-primary-darker: #6842C2;
@@ -19,8 +21,6 @@
  
     --color-text-complement: #9C98A6;
     
-    --color-line-in-white: #E6E6F0;
-    --color-input-background: #F8F8FC;
     --color-button-text: #FFFFFF;
     --color-box-base: #FFFFFF;
     --color-box-footer: #FAFAFC;
@@ -43,9 +43,9 @@ body {
     background: var(--color-background);
 }
 
-body, input, button {
+body, input, button, select {
     font: 500 1.6rem Roboto;
-    color: var(--color-text-base);
+    color: var( --color-text-title);
 }
 
 @media (min-width: 700px) {

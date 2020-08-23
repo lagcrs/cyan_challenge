@@ -5,8 +5,6 @@ import Button from '../Button';
 
 import './styles.css'
 
-// import { Container } from './styles';
-
 function Menu(props) {
   return (
     <nav className="header">
