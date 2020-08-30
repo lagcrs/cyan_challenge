@@ -2,7 +2,9 @@ const { Mill } = require('../app/models/index');
 
 module.exports = {
     async index(req, res) {
-        await Mill.findAll()
+        await Mill.findAll({
+            attributes: ['name']
+        })
         .then(mills => res.status(200).json(mills))
         .catch(err => res.status(500).json({
             message: 'Unexpected error while searching for mills',

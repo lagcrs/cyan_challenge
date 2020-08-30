@@ -1,0 +1,9 @@
+.header-filter {
+    background: var(--color-primary);
+}
+
+.header-filter form {
+    margin: 0 auto;
+    width: 90%;
+    padding: 3rem 0;
+}

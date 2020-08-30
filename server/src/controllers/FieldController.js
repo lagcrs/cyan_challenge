@@ -6,7 +6,7 @@ module.exports = {
             attributes: ['code', 'coordinates','farm_id']
         })
         .then(fields => res.status(200).json(fields))
-        .cathc(err => res.status(500).json({
+        .catch(err => res.status(500).json({
             message: 'Unexpected error while searching for farms',
             error: err
         }));
