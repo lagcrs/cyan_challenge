@@ -16,6 +16,12 @@ module.exports = {
             })
         }
 
-        return res.status(200).json(fields)
+        
+        var fieldData = [];
+        for (var i in fields) {
+            fieldData.push(fields[i]['coordinates']['coordinates'])
+        }
+
+        return res.status(200).json(fieldData)
     }
 }
