@@ -17,6 +17,8 @@
 ## 💻 Sobre o projeto
 Sugarcane é uma plataforma que auxilia agricultores a possuírem um melhor controle de suas produções. O usuário possuirá controle sobre usinas, safras, fazendas e talhões, podendo cadastrar essas funcionalidades, além de poder realizar filtragem para buscar as coordenadas dos talhões. :earth_americas:
 
+- Plataforma no [Vercel](https://sugarcane.lagcrs.vercel.app/) :sparkles: <br/>
+
 ## 🛠 Tecnologias utilizadas
 
 Para o desenvolvimento das interfaces foi utilizado o React, - uma biblioteca JavaScript focada na criação de interfaces reaproveitaveis para o usuário - com Styled Components. Já para a aplicação das regras de negócios foi escolhido o Node.js, uma plataforma JavaScript que processa códigos JS no servidor. Para o armazenamento foi escolhido o PostgreSQL + 
