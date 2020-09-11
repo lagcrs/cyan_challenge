@@ -1,0 +1,24 @@
+.header-maps {
+    margin: 0 auto;
+
+    padding: 3rem 0;
+    background: var(--color-primary);
+    height: 180px;
+}
+#content-filter-maps{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    border: 1px solid var(--color-line-in-white);
+    border-radius: 0.8rem;
+    max-width: 90%;
+    padding: 4rem;
+    padding-bottom: 4rem;
+    background: white;
+    color: var(--color-text-title);
+}
+
+#content-filter-maps img {
+    margin-top: 2rem;
+}
