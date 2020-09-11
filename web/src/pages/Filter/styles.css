@@ -1,6 +1,6 @@
 .header-filter {
     background: var(--color-primary);
-    height: 100%;
+    height: 180px;
 }
 
 .header-filter .container{

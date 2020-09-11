@@ -6,6 +6,7 @@ import Button from '../../components/Button';
 import FormSelect from '../../components/FormSelect';
 import './styles.css';
 
+import { useHistory } from "react-router-dom";
 
 const FilterHarvest = (props) => {
 	const [show, setShow] = useState(false);
@@ -65,7 +66,6 @@ const FilterFarm = (props) => {
 		});
 		setFields(response.data);
 	}
-	console.log(fields)
 
 	return (
 		<>
@@ -82,20 +82,28 @@ const FilterFarm = (props) => {
 
 const FilterField = (props) => {
 	const [fieldCode, setFieldCode] = useState('');
-	const [fieldsResults, setFieldsResults] = useState('');
 
 	const options = props.data;
 
+	let history = useHistory();
+
 	const handleSubmit = async e => {
 		e.preventDefault();
+		
 		const response = await api.get('/filter-field', {
 			params: {
 				field_code: fieldCode
 			},
 		});
-		setFieldsResults(response.data);
+
+		var fieldsResults = response.data;
+
+		history.push({
+			pathname: "/maps",
+			data: [fieldsResults, fieldCode]
+		})
 	}
-	console.log(fieldsResults)
+
 
 	return (
 		<>
@@ -113,16 +121,9 @@ function Filter() {
 	const [show, setShow] = useState(false);
 	
 	const [mill, setMill] = useState("");
-	const [harvestStart, setHarvestStart] = useState('');
-	const [harvestEnd, setHarvestEnd] = useState('');
-	
-	
-	
 
 	const [mills, setMills] = useState("");
 	const [harvests, setHarvests] = useState({});
-	
-	
 
 	useEffect(() => {
 		async function load(){
@@ -133,46 +134,15 @@ function Filter() {
 	}, []);
 
 	
-
-	
-	
 	var millName = [];
 	for (var i in mills) {
 		millName.push(mills[i]['name'])
 	}
 	
 	var harvestCodeData = [];
-	for (var i in harvests) {
-		harvestCodeData.push(harvests[i]['code'])
+	for (var j in harvests) {
+		harvestCodeData.push(harvests[j]['code'])
 	}
-
-
-
-	var harvestStartData = [];
-	for (var i in harvests) {
-		harvestStartData.push(harvests[i]['start'])
-	}
-	
-	var harvestEndData = [];
-	for (var i in harvests) {
-		harvestEndData.push(harvests[i]['end'])
-	}
-	
-	
-	// var farmNameData = [];
-	// for (var i in farms) {
-	// 	farmNameData.push(farms[i]['name'])
-	// }
-	
-	// var farmCodeData = [];
-	// for (var i in farms) {
-	// 	farmCodeData.push(farms[i]['code'])
-	// }
-	
-	// var fieldCodeData = [];
-	// for (var i in fields) {
-	// 	fieldCodeData.push(fields[i]['code'])
-	//}
 
 	const handleSubmit = async e => {
 		e.preventDefault();
